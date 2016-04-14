@@ -1,5 +1,13 @@
 $grid-columns: 12;
 
+$gutter: (
+  xs: 12px,
+  sm: 18px,
+  md: 24px,
+  lg: 30px,
+  xl: 30px
+);
+
 $breakpoints: (
   sm: 544px,
   md: 768px,
@@ -49,7 +57,7 @@ $breakpoints-max: (
 }
 
 @mixin loop-grid-columns($columns, $class) {
-  @for $i from 0 through $columns {
+  @for $i from 1 through $columns {
     @include calc-grid-column($i, $class);
   }
 }
@@ -137,19 +145,19 @@ html, body {
 
 .row {
   @extend %clearfix;
-  margin-left: -6px;
-  margin-right: -6px;
+  margin-left: -(map-get($gutter, xs)/2);
+  margin-right: -(map-get($gutter, xs)/2);
   @include bp(sm) {
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -(map-get($gutter, sm)/2);
+    margin-right: -(map-get($gutter, sm)/2);
   }
   @include bp(md) {
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -(map-get($gutter, md)/2);
+    margin-right: -(map-get($gutter, md)/2);
   }
   @include bp(lg) {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -(map-get($gutter, lg)/2);
+    margin-right: -(map-get($gutter, lg)/2);
   }
 }
 
@@ -164,19 +172,19 @@ html, body {
 .wrapper,
 .container,
 .col {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: (map-get($gutter, xs)/2);
+  padding-right: (map-get($gutter, xs)/2);
   @include bp(sm) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: (map-get($gutter, sm)/2);
+    padding-right: (map-get($gutter, sm)/2);
   }
   @include bp(md) {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: (map-get($gutter, md)/2);
+    padding-right: (map-get($gutter, md)/2);
   }
   @include bp(lg) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (map-get($gutter, lg)/2);
+    padding-right: (map-get($gutter, lg)/2);
   }
 }
 
