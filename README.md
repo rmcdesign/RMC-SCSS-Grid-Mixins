@@ -1,4 +1,9 @@
 # RMC-SCSS-Grid-Mixins
+
 Some SCSS mixins for setting up a bootstrap style grid
 
-Uses maps to set breakpoints and responsive gutters
+Using maps to set breakpoints and responsive gutters
+
+TODO: Add some marging helper classes for vertical spacing
+
+TODO: Add push and pull classes maybe
