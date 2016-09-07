@@ -162,6 +162,7 @@ html, body {
 }
 
 // Keeping seperate col class so I can adjust padding at various breakpoints
+// conside using [class^="col-"] to elimate extra col class (CSS3 only)
 .col {
   @extend %clearfix;
   float: left;
